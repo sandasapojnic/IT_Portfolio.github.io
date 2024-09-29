@@ -104,3 +104,27 @@ emailInput.addEventListener("input", () => {
 
 // Save original label text on page load
 saveOriginalLabels();
+
+
+//Mobile menu adaptation
+
+const menuToggleCheckbox = document.getElementById("menu-toggle-checkbox");
+const mobileMenu = document.querySelector(".mobile-menu");
+const menuItems = document.querySelectorAll(".mobile-menu li a"); // Select all menu links
+
+// Event listener for the checkbox to toggle the mobile menu
+menuToggleCheckbox.addEventListener("change", () => {
+    if (menuToggleCheckbox.checked) {
+        mobileMenu.style.display = "flex"; // Show the mobile menu
+    } else {
+        mobileMenu.style.display = "none"; // Hide the mobile menu
+    }
+});
+
+// Event listener to close the menu when a menu item is clicked
+menuItems.forEach(item => {
+    item.addEventListener("click", () => {
+        menuToggleCheckbox.checked = false; // Uncheck the checkbox
+        mobileMenu.style.display = "none"; // Hide the mobile menu
+    });
+});

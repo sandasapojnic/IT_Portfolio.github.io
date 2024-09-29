@@ -420,6 +420,7 @@ section {
 
 .contact-form form label {
     margin-bottom: 5px;
+    font-weight: bold;
     font-family: "Poppins", sans-serif;
 }
 input[type=text],
@@ -449,7 +450,7 @@ textarea {
     transition: background 0.3s;
     align-self: flex-start;
     font-family: "Poppins", sans-serif;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 .contact-form form button:hover {
