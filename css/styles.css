@@ -91,8 +91,6 @@ nav ul li a:hover {
     flex-direction: column;
 }
 
-
-
 /* Sectiuni */
 .container {
     max-width: 1200px;
@@ -420,7 +418,6 @@ section {
 
 .contact-form form label {
     margin-bottom: 5px;
-    font-weight: bold;
     font-family: "Poppins", sans-serif;
 }
 input[type=text],
