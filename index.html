@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Portofoliu IT - Sapojnic Alexandra</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1 id="logo">IT Portofolio</h1>
+        <nav>
+          <ul class="mobile-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <label for="menu-toggle-checkbox" class="menu-toggle-label">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </label>
+          <input type="checkbox" id="menu-toggle-checkbox" />
+        </nav>
+      </div>
+    </header>
+    <section id="home">
+      <div class="home-content">
+        <h1>Hello, my name is</h1>
+        <h2>Sapojnic Alexandra</h2>
+        <h3 class="typing-effect">I am a Junior Software Developer</h3>
+        <a
+          href="file:///C:/Users/User1/Downloads/CV_Sapojnic_Alexandra.pdf"
+          class="btn"
+          target="_blank"
+          >Download CV</a
+        >
+      </div>
+    </section>
+    <section id="about">
+      <h2 class="section-title">About me</h2>
+      <div class="about-container">
+        <div class="profile-image">
+          <img src="images/profile_photo.jpg" alt="Profilul meu" />
+        </div>
+        <div class="about-text">
+          <p>
+            I am currently taking a Frontend development course, where I am
+            learning how to build responsive web pages using HTML and CSS. I pay
+            particular attention to implementing clean and well-styled layouts
+            that can easily adapt to different screen sizes. Additionally, I am
+            working with JavaScript to create more interactive web pages. Some
+            of the tasks I find helpful involve various aspects of the course,
+            allowing me to apply my learning and enhance my skills outside the
+            classroom. I have found this to be a very practical way to build my
+            skills as a developer and prepare for bigger challenges.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="services">
+      <h2 class="section-title">Services</h2>
+      <div class="container">
+        <div class="service">
+          <p class="pencil">
+            <i class="fa fa-html5" aria-hidden="true"></i>
+          </p>
+          <h3>HTML & CSS</h3>
+          <p>
+            I am able to produce clean and structured web page layouts. Focusing
+            on creating more accessible and well-structured content frameworks.
+          </p>
+        </div>
+        <div class="service">
+          <p class="pencil">
+            <i class="fa fa-window-restore" aria-hidden="true"></i>
+          </p>
+          <h3>Responsive Design</h3>
+          <p>
+            I build responsive websites by using techniques to fit website
+            content on any sized screen, which enhances the experiences.
+          </p>
+        </div>
+        <div class="service">
+          <p class="pencil">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </p>
+          <h3>JavaScript</h3>
+          <p>
+            I can add interactivity to web pages with basic JavaScript, such as
+            form validation, dynamic content updates, and other simple
+            interactions.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="skills">
+      <h2 class="section-title">Skills</h2>
+      <div class="container">
+        <div class="skills-description">
+          <h3>Soft Skills</h3>
+          <div>
+            <ul>
+              <li>
+                Open to receiving and implementing feedback to continuously
+                improve.
+              </li>
+              <li>
+                Strong ability to collaborate effectively with team members.
+              </li>
+              <li>Skilled at prioritizing tasks and managing deadlines.</li>
+              <li>
+                Proficient in analyzing and understanding codebases to ensure
+                alignment with requirements.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="skills-progress">
+          <h3>Hard Skills</h3>
+          <div>
+            <div class="skill">
+              <label for="html">HTML5:</label>
+              <progress id="html" value="40" max="100"></progress>
+            </div>
+            <div class="skill">
+              <label for="css">CSS3:</label>
+              <progress id="css" value="30" max="100"></progress>
+            </div>
+            <div class="skill">
+              <label for="js">JavaScript:</label>
+              <progress id="js" value="30" max="100"></progress>
+            </div>
+            <div class="skill">
+              <label for="cpp">C/C++:</label>
+              <progress id="cpp" value="55" max="100"></progress>
+            </div>
+            <div class="skill">
+              <label for="java">Java:</label>
+              <progress id="java" value="40" max="100"></progress>
+            </div>
+            <div class="skill">
+              <label for="sql">SQL:</label>
+              <progress id="sql" value="60" max="100"></progress>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="works">
+      <h2 class="section-title">Lucrări</h2>
+      <div class="container">
+        <div class="work">
+          <a href="../../Chess_Board/index.html" target="_blank">
+            <img src="images/projects/chess.jpg" alt="Chess Board" />
+          </a>
+          <p>
+            Proiectul creează un tablou de șah cu HTML și CSS, adăugând etichete
+            pentru coloane și rânduri. CSS-ul stilizează tabla și efectele
+            hover.
+          </p>
+        </div>
+        <div class="work">
+          <a href="../../Favorite_actors/index.html" target="_blank">
+            <img src="images/projects/actors.jpg" alt="Favorite actors" />
+          </a>
+          <p>
+            Proiectul utilizează Flexbox pentru a aranja cardurile actorilor și
+            filmelor, gestionând alinierea și distribuția spațiului între
+            imagini și text.
+          </p>
+        </div>
+        <div class="work">
+          <a href="../../E-shop/index.html" target="_blank">
+            <img src="images/projects/e-shop.jpg" alt="E-shop" />
+          </a>
+          <p>
+            Flexbox a fost utilizat pentru a organiza și alinia elementele pe
+            pagină, asigurând un layout flexibil și adaptabil, cum ar fi
+            cardurile produselor și opțiunile de selecție.
+          </p>
+        </div>
+        <div class="work">
+          <a href="../../404_error/index.html" target="_blank">
+            <img src="images/projects/404-error.jpg" alt="404 Error page" />
+          </a>
+          <p>
+            Proiectul prezintă o pagină 404 cu un fundal animat și un mesaj
+            centralizat, folosind CSS pentru efecte de animație și stilizare
+            dinamică.
+          </p>
+        </div>
+        <div class="work">
+          <a href="../../Galerie_Grid/galerie.html" target="_blank">
+            <img src="images/projects/galerie.jpg" alt="Galerie Foto" />
+          </a>
+          <p>
+            Proiectul prezintă o galerie de imagini cu 10 fotografii de câini
+            folosind CSS Grid pentru a organiza imaginile într-un layout
+            flexibil și responsive.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <div class="container">
+        <div class="contact-info">
+          <h3>How to Find Me</h3>
+          <p>
+            I will be happy to receive your proposal or to be contacted. Please
+            feel free to reach out!
+          </p>
+          <div class="info-item">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <div class="contact-details">
+              <span class="contact-label">Name:</span>
+              <span>Sapojnic Alexandra</span>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fa fa-location-arrow" aria-hidden="true"></i>
+            <div class="contact-details">
+              <span class="contact-label">Address:</span>
+              <span>Chișinău</span>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <div class="contact-details">
+              <span class="contact-label">Email:</span>
+              <span>sanda.sapojnic@gmail.com</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form id="contactForm">
+            <label for="name">Name*</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Louis Smith"
+              required
+            />
+
+            <label for="email">Email*</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@gmail.com"
+              required
+            />
+
+            <label for="subject">Subject:</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="Enter the subject"
+              required
+            />
+
+            <label for="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Enter your message"
+              required
+            ></textarea>
+
+            <button type="submit">Send</button>
+          </form>
+          <div id="formMessage" class="hidden"></div>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+    <footer>
+      <div class="footer-content">
+        <p class="footer-text">&copy; Created by Sapojnic Alexandra</p>
+        <button class="footer-button" onclick="window.scrollTo(0, 0)">
+          <i class="fa fa-arrow-up" aria-hidden="true"></i>
+        </button>
+      </div>
+    </footer>
+  </body>
+</html>
