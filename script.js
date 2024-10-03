@@ -4,7 +4,6 @@ const emailInput = document.querySelector("#email");
 const subjectInput = document.querySelector("#subject");
 const messageInput = document.querySelector("#message");
 
-// Save original label text for restoration
 const saveOriginalLabels = () => {
     const labels = document.querySelectorAll("label");
     labels.forEach((label) => {
@@ -12,39 +11,33 @@ const saveOriginalLabels = () => {
     });
 };
 
-// Validate Name
 const validateName = (name) => {
     const namePattern = /^[a-zA-Z\s-]+$/;
     return name.trim() !== "" && namePattern.test(name) && !/^\s|\d/.test(name);
 };
 
-// Validate Email
 const validateEmail = (email) => {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return email.trim() !== "" && emailPattern.test(email) && !/^\s|\d/.test(email);
 };
 
-// Clear error message
 const clearError = (input) => {
     const label = input.previousElementSibling;
-    label.textContent = label.getAttribute("data-original"); // Restore original text
+    label.textContent = label.getAttribute("data-original");
     label.classList.remove("error-label");
     input.classList.remove("error");
 };
 
-// Show error message
 const showError = (input, message) => {
     const label = input.previousElementSibling;
-    label.textContent = message; // Modify label text
-    label.classList.add("error-label"); // Add error styling class
+    label.textContent = message;
+    label.classList.add("error-label");
     input.classList.add("error");
 };
 
-// Validate all fields
 const validateFields = () => {
     let isValid = true;
 
-    // Validate Name
     if (!validateName(nameInput.value)) {
         isValid = false;
         showError(nameInput, "Please enter a valid name.");
@@ -52,7 +45,6 @@ const validateFields = () => {
         clearError(nameInput);
     }
 
-    // Validate Email
     if (!validateEmail(emailInput.value)) {
         isValid = false;
         showError(emailInput, "Please enter a valid email.");
@@ -60,7 +52,6 @@ const validateFields = () => {
         clearError(emailInput);
     }
 
-    // Validate Subject
     if (subjectInput.value.trim() === "") {
         isValid = false;
         showError(subjectInput, "Subject cannot be empty.");
@@ -68,7 +59,6 @@ const validateFields = () => {
         clearError(subjectInput);
     }
 
-    // Validate Message
     if (messageInput.value.trim() === "") {
         isValid = false;
         showError(messageInput, "Message cannot be empty.");
@@ -79,15 +69,13 @@ const validateFields = () => {
     return isValid;
 };
 
-// Form submission
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     if (validateFields()) {
-        form.reset(); // Reset form fields
+        form.reset();
     }
 });
 
-// Immediate validation on input change
 nameInput.addEventListener("input", () => {
     clearError(nameInput);
     if (!validateName(nameInput.value)) {
@@ -102,29 +90,27 @@ emailInput.addEventListener("input", () => {
     }
 });
 
-// Save original label text on page load
 saveOriginalLabels();
-
-
-//Mobile menu adaptation
 
 const menuToggleCheckbox = document.getElementById("menu-toggle-checkbox");
 const mobileMenu = document.querySelector(".mobile-menu");
-const menuItems = document.querySelectorAll(".mobile-menu li a"); // Select all menu links
+const menuItems = document.querySelectorAll(".mobile-menu li a");
 
-// Event listener for the checkbox to toggle the mobile menu
 menuToggleCheckbox.addEventListener("change", () => {
-    if (menuToggleCheckbox.checked) {
-        mobileMenu.style.display = "flex"; // Show the mobile menu
-    } else {
-        mobileMenu.style.display = "none"; // Hide the mobile menu
+    if (window.innerWidth <= 948) {
+        if (menuToggleCheckbox.checked) {
+            mobileMenu.style.display = "flex";
+        } else {
+            mobileMenu.style.display = "none";
+        }
     }
 });
 
-// Event listener to close the menu when a menu item is clicked
 menuItems.forEach(item => {
     item.addEventListener("click", () => {
-        menuToggleCheckbox.checked = false; // Uncheck the checkbox
-        mobileMenu.style.display = "none"; // Hide the mobile menu
+        if (window.innerWidth <= 930) {
+            menuToggleCheckbox.checked = false;
+            mobileMenu.style.display = "flex";
+        }
     });
 });
